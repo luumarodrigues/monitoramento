@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./prometheus/:/etc/prometheus/:ro"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    depends_on: 
+      - cadvisor
+    networks:
+      - monitoring
+
+  cadvisor:
+    image: google/cadvisor
+    container_name: cadvisor
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/:/rootfs:ro"
+      - "/var/run:/var/run:rw"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+    depends_on: 
+      - redis
+    networks:
+      - monitoring
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports: 
+      - "6379:6379"
+    networks: 
+      - monitoring
+
+networks:
+    monitoring:
+        driver: bridge
+      
+  
