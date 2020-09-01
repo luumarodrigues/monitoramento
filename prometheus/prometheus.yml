@@ -14,13 +14,19 @@ scrape_configs: #onde setamos quais recursos o prometheus irá monitorar
     scrape_interval: 5s
     scrape_timeout: 2s
     static_configs:
-      - targets: 
-        - localhost:9090
+    - targets: 
+      - localhost:9090
 #O cadvisor irá coletar as metricas do docker para que o prometheus consiga consumir
   - job_name: cadvisor
     scrape_interval: 5s
     scrape_timeout: 2s
     static_configs:
-      - targets: 
-        - cadvisor:8080
-  
+    - targets: 
+      - cadvisor:8080
+#O node_exporter vai pegar metricas do Sistema Operacional
+  - job_name: node_exporter
+    scrape_interval: 5s
+    scrape_timeout: 2s
+    static_configs:
+    - targets: 
+      - node_exporter:9100
