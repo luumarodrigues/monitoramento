@@ -4,8 +4,8 @@ global:
   scrape_interval:     15s #a cada 15s o prometheus irá consultar (scrape) os alvos (targert). É possivel sobrescreve-lo no scrape_configs
   evaluation_interval: 15s #frequencia q o prometheus irá avaliar as regras do rules_files -> criar novos time series -> gerar alertas
   
-#rules_files: #local onde é configurado o path do arquivo de qualquer regra que o Prometheus tenha que carregar
-  #- "first.rules"
+rule_files: #local onde é configurado o path do arquivo de qualquer regra que o Prometheus tenha que carregar
+  - "/etc/prometheus/alert.rules"
   #- "second.rules"
   
 scrape_configs: #onde setamos quais recursos o prometheus irá monitorar
