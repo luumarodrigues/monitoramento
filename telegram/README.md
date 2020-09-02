@@ -4,7 +4,7 @@
 
 É o bot Alertmanager para Prometheus que avisa sobre alertas. Basta configurar o AlertManager para enviar Webhooks para o bot. Além disso, com o Alertmanager-bot você sempre pode enviar comandos para obter informações atualizadas do gerenciador de alertas.
 
-#### Pré-requisito
+### Pré-requisito
 
 No Telegram, criar um @BotFather como o exemplo a seguir: 
 
@@ -13,7 +13,7 @@ No Telegram, criar um @BotFather como o exemplo a seguir:
 </p>
 
 
-#### Docker compose
+### Docker compose
 
 Incluir o conteiner do alertmanager-bot no docker-compose.yaml: 
 
