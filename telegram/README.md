@@ -9,7 +9,7 @@
 No Telegram, criar um @BotFather como o exemplo a seguir: 
 
 <p align="center">
-  <img src="example-botfather.png" alt="Diagrama" />
+  <img src="example-botfather.png" alt="Diagrama" width="200" height="200"/>
 </p>
 
 
