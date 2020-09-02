@@ -18,7 +18,7 @@ receivers:
   email_configs:
   - to: "luumarodrigues@hotmail.com" #destinatário
     auth_username: 'luumarodrigues@hotmail.com' #seu email
-    auth_password: 'spjifaxbgpcqaypg' #senha_do_app_gerada_pelo_email
+    auth_password: 'xxxxxx' #senha_do_app_gerada_pelo_email
     send_resolved: true
 
 ## ALERTA SLACK
