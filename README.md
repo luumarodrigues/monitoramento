@@ -61,7 +61,7 @@ Usuário: admin
 * Ir em Panel -> visualization -> selecionar Graph
 * ir em Query -> metrics -> adicionar a query **node_memory_MemFree_bytes** (apenas exemplo)
 * Clicar em "Save" -> escolher um nome para sua dashboars -> Save
-* Visualise a dashboards criada, clicando no icone a esquerda do painel.
+* Veja a dashboards criada, clicando no icone a esquerda do painel.
 
 <!-- ### Autenticação Basica
 O Prometheus não suporta diretamente a autenticação básica para conexões com o navegador de expressões do Prometheus e a API HTTP. Para impor a autenticação básica para essas conexões, vamos usar o Prometheus em conjunto com um proxy reverso e aplicar a autenticação na camada de proxy.
