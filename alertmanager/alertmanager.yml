@@ -10,7 +10,7 @@ templates:
 - "/etc/alertmanager/template/*.tmpl"
   
 route:
-    repeat_interval: 30s
+    repeat_interval: 30m
     receiver: alert-email
 
 receivers:

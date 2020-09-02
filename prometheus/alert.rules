@@ -3,7 +3,7 @@ groups:
   rules:
   # Alert for any instance that is unreachable for > 30s.
   - alert: InstanceDown #nome para o alert
-    expr: up == 1 #condiçao para o alerta (down = 0; up =1)
+    expr: up == 0 #condiçao para o alerta (down = 0; up =1)
     for: 30s #se parmanecer 30s down ele emite o alerta
     labels: #acao que será tomada caso a condicao seja verdadeira
      severity: page
