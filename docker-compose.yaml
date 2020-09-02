@@ -13,6 +13,7 @@ services:
     depends_on: 
       - cadvisor
       - node_exporter
+      - alertmanager
     networks:
       - monitoring
 
@@ -49,6 +50,18 @@ services:
     cap_add: 
       - SYS_TIME
     networks: 
+      - monitoring
+
+  alertmanager:
+    image: prom/alertmanager
+    container_name: alertmanager
+    ports:
+      - 9093:9093
+    volumes:
+      - "./alertmanager:/etc/alertmanager/:ro"
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
+    networks:
       - monitoring
 
 networks:

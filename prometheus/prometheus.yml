@@ -7,7 +7,13 @@ global:
 rule_files: #local onde é configurado o path do arquivo de qualquer regra que o Prometheus tenha que carregar
   - "/etc/prometheus/alert.rules"
   #- "second.rules"
-  
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - alertmanager:9093
+
 scrape_configs: #onde setamos quais recursos o prometheus irá monitorar
 #esse job está consultando a URL: http://localhost:9090/metrics
   - job_name: prometheus #irá coletar as metricas dele mesmo
